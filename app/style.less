@@ -1,0 +1,378 @@
+@main: #0089CF;
+@sec: #00AEEF;
+@w: #fff;
+@b: #323132;
+@beige: #F4F4F4;
+
+@hd: ~"only screen and (min-width: 1200px)";
+@desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
+@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
+@mobile: ~"only screen and (max-width: 719px)";
+
+
+html,body{
+    height: 100%;
+}
+
+.font{ font-family: 'Comfortaa', cursive; }
+
+.transition{
+    transition: all 0.5s;
+}
+
+body{
+    background: @w;
+    color: @b; 
+    .font;
+}
+header{
+    position: relative;
+    height: 20px;
+    background:@b;
+    .transition;
+    @media @tablet{ height: 20px; }
+    @media @mobile{ height: 100px; }
+    .bground{
+        width: 100%;
+        top:90%;
+        position: absolute;
+        z-index: 0;
+        .transition;
+        @media @hd{ top: -100%; }
+    }
+    .logo{
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width:240px;
+        margin-left: -120px;
+        .transition;
+        @media @tablet{ top: 60px; }
+        @media @desktop{ top: 80px; width: 280px; margin-left: -140px;}
+        @media @hd{ top: 80px; width: 320px; margin-left: -160px; }
+    }
+}
+
+section.whatis{
+    background-image: url(img/back1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 400px;
+    min-height: 1200px;
+    @media @mobile{ padding-top: 400px; .transition; }
+    @media @tablet{ padding-top: 340px; .transition; }
+    @media @desktop{ padding-top: 480px; .transition; }
+    @media @hd{ padding-top: 820px; .transition; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 0 0 20px #fff;
+    .title, .description{ text-align: center; position: relative; z-index: 1;}
+    .title{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .description{
+        max-width: 800px; font-size: 1.4rem;
+    }
+}
+
+
+.tri{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 100px 50px 0;
+    border-color: transparent @main transparent transparent;
+    position: absolute;
+    z-index: 0;
+    &.tr2{
+        border-width: 150px 50px 100px 0;
+        border-color: transparent transparent @sec transparent;
+    }
+    &.tr3{
+        border-width: 150px 50px 100px 0;
+        border-color: transparent transparent @main transparent;
+    }
+    &.tr4{
+        border-width: 150px 50px 100px 0;
+        border-color: fade(@b, 94%) transparent transparent transparent;
+    }
+    &.tr5{
+        border-width: 200px 50px 200px 0;
+        border-color: fade(@b, 94%) transparent transparent transparent;
+    }
+    &.tr6{
+        border-color: transparent @b transparent transparent;
+    }
+}
+
+
+
+
+section.whatdo{
+    background-image: url(img/back2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color:@w;
+    padding: 200px 0;
+    .title, .description{ text-align: center; position: relative; z-index: 1;}
+    &>.title{
+        color:@w;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .description{
+        max-width: 800px; font-size: 1.4rem;
+    }
+    .description_detail{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 0;
+        .card{
+            position: relative;
+            text-align: center;
+            min-width: 320px;
+            margin: 20px 30px;
+            min-height: 100%;
+            flex-grow: 1;
+            background: @b;
+            color:@w;
+            padding: 20px;
+            .title, .subtitle{
+                color:@w;
+            }
+            .subtitle{
+                font-size: 0.9rem;
+            }
+            svg{
+                max-width: 80px;
+                max-height: 80px;
+                margin-bottom: 20px;
+            }
+            &:before, &:after{
+                content:"";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+            }
+            &:before{
+                border-width: 0 20px 40px 10px;
+                border-color: transparent transparent @b transparent;
+                left: -14px;
+                bottom: -6px;
+                z-index: 1;
+            }
+            &:after{
+                border-width: 30px 40px 16px 0;
+                border-color: transparent @w transparent transparent;
+                right: -10px;
+                bottom: -12px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+section.callus{
+    background-image: url(img/back3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 200px 0;
+    &>.title{
+        font-size: 3rem;
+        font-weight: bold;
+        h2{
+            text-align: center;
+        }
+    }
+    .contactus{
+        display: flex;
+        @media @mobile{
+            flex-direction: column;
+        }
+        .where{
+            margin: 30px;
+            text-align: center;
+        }
+    }
+    form{
+        width: 100%;
+        max-width: 600px;
+    }
+    .form{
+        display: flex;
+        margin: 20px 0;
+        @media @mobile{
+            flex-direction: column;
+            margin: 0;
+        }
+        label{
+            flex-grow: 1;
+            margin: 10px;
+            span{
+                display: block;
+                font-size: 0.9rem;
+            }
+        }
+        input, textarea{
+            border:none;
+            background: @b;
+            color:@w;
+            padding: 10px;
+            -webkit-appearance: none;
+            width: 100%;
+            font-size: 1.1rem;
+            &:::placeholder{
+                color:@b;
+            }
+        }
+    }
+    button{
+        border:none;
+        background: @main;
+        color:@w;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1rem;
+        &:hover{
+            cursor: pointer;
+            background: @sec;
+        }
+    }
+}
+
+
+
+
+section.wherewe{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 200px 40px;
+    background:@b;
+    .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 34.6px 20px;
+        border-color: transparent transparent @beige transparent;
+        &.trb{
+            border-color: transparent transparent @b transparent;
+        }
+    }
+    .triangles{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+    }
+    color:@w;
+    &>.title{
+        font-size: 3rem;
+        font-weight: bold;
+        h2{
+            color:@w;
+            text-align: center;
+        }
+    }
+    .description{
+        text-align: center;
+        max-width: 800px; font-size: 1.4rem;
+    }
+    iframe{
+        height: 400px;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+section.whyus{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 200px 40px;
+    background:@w;
+    &>.title{
+        font-size: 3rem;
+        font-weight: bold;
+        h2{
+            text-align: center;
+        }
+    }
+    .description{
+        text-align: center;
+        max-width: 800px; font-size: 1.4rem;
+    }
+
+    .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 34.6px 20px;
+        border-color: transparent transparent @beige transparent;
+        &.trb{
+            border-color: transparent transparent @b transparent;
+        }
+    }
+    .triangles{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+    }
+    &.bus{
+        background: @b;
+        .title{
+            color:@w;
+        }
+    }
+}
+
+
+
+.callus .notification{
+    display: none;
+}
