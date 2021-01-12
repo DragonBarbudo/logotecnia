@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26667",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/app\/img\/back1.jpg": {
 		"ft": 16384,
 		"iS": 51557,
@@ -122,6 +129,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/app\/img\/logotecnia-ima.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/app\/img\/logotecnia-ima.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/app\/img\/logotecnia.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -131,6 +148,16 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/app\/lax.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/app\/lax-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/app\/style.css": {
 		"aP": 1,
@@ -166,6 +193,13 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/favicon (1).ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/favicon (1).ico",
+		"oF": 0
+		},
 	"\/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
@@ -179,8 +213,8 @@
 		"oA": 0,
 		"oAP": "\/favicon.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

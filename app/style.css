@@ -408,4 +408,8 @@ section.whyus.bus .title {
 .callus .notification {
   display: none;
 }
+.logo.logobottom {
+  width: 80%;
+  max-width: 280px;
+}
 /*# sourceMappingURL=style.css.map */
